@@ -1,0 +1,10 @@
+server:
+  port: 9005
+spring:
+  application:
+    name: image-service
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: image-service-db

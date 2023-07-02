@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: equipments-service
+    config:
+      import: optional:configserver:http://localhost:8000
+server:
+  port: 9001
+
+springdoc:
+  api-docs:
+    enabled: true
+management:
+  endpoint:
+    consul:
+      enabled: true
+    web:
+      exposure:
+        include: openapi, swagger-ui

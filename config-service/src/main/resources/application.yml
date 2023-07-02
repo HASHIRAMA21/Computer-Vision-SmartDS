@@ -1,0 +1,12 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: /home/krohn/IdeaProjects/Computer-Vision-SmartDS/config-repo/
+          default-label: main
+

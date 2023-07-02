@@ -1,0 +1,36 @@
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+  api-docs:
+  application:
+    name: gateway-service
+  config:
+    import: optional:configserver:http://localhost:8000
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 256MB
+      max-request-size: 256MB
+
+server:
+  port: 9000
+
+springdoc:
+  api-docs:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: openapi, swagger-ui
